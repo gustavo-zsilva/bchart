@@ -15,6 +15,8 @@ export default function Home() {
         total={10}
         oscillation={[2, 3, 6, 8, 5, 2, 7]}
         labels={['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho']}
+        bgColor="gray.700"
+        columnsColor="yellow.500"
       />
     </Flex>
   )

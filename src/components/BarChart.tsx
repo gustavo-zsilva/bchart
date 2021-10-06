@@ -1,4 +1,4 @@
-import { Flex } from '@chakra-ui/react'
+import { Flex, ChakraProps } from '@chakra-ui/react'
 
 import { ChartColumns } from './ChartColumns'
 import { ChartProvider } from '../contexts/ChartContext'
@@ -6,13 +6,13 @@ import { RevenueStack } from './RevenueStack'
 import { Header } from './Header'
 import { StylesProvider } from '../contexts/StylesContext'
 
-type BarChartProps = {
+type BarChartProps = ChakraProps & {
     total: number,
     oscillation: number[],
     labels: string[],
-    columnsColor: string,
-    bgColor: string,
-    textColor: string,
+    columnsColor?: string,
+    bgColor?: string,
+    textColor?: string,
 }
 
 export function BarChart({
@@ -22,18 +22,16 @@ export function BarChart({
     columnsColor,
     bgColor,
     textColor,
+    ...chakraProps
 }: BarChartProps) {
-
-    
-
     return (
-        <StylesProvider>
+        <StylesProvider columnsColor={columnsColor} bgColor={bgColor} textColor={textColor}>
             <ChartProvider total={total} oscillation={oscillation} labels={labels}>
                 <Flex
                     display="grid"
-                    bg="gray.900"
+                    bg={bgColor ? bgColor : "gray.900"}
                     
-                    m="10rem auto"
+                    {...chakraProps}
 
                     h="18rem"
 
