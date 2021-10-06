@@ -20,15 +20,16 @@ export function BarChart({ total, oscillation }: BarChartProps) {
                 display="grid"
                 bg="gray.900"
                 color="#FFF"
-                px=".6rem"
                 
                 m="10rem auto"
-                
+
+                h="18rem"
+
                 borderRadius=".2rem"
                 border="4px solid"
                 borderColor="gray.700"
-                gridTemplateColumns="1fr auto"
-                gridTemplateRows="1fr auto"
+                gridTemplateColumns="auto 1fr"
+                gridTemplateRows="auto 1fr"
                 gridTemplateAreas={`'Header Header' 'Revenue Columns'`}
             >
                 <Header />

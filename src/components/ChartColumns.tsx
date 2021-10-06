@@ -6,7 +6,7 @@ export function ChartColumns() {
     const { percentageArr } = useChart()
 
     return (
-        <Flex gridGap="1rem" gridArea="Columns">
+        <Flex gridGap="1rem" gridArea="Columns" px=".6rem">
             {percentageArr.map((value, index) => (
                 <Flex
                     key={index}
@@ -15,9 +15,7 @@ export function ChartColumns() {
                     w="2rem"
                     alignSelf="flex-end"
                     borderTopRadius=".2rem"
-                >
-                    
-                </Flex>
+                />
             ))}
         </Flex>
     )

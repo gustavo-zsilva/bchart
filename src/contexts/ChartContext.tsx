@@ -6,6 +6,7 @@ type ChartContextProps = {
     total: number,
     oscillation: number[],
     percentageArr: number[],
+    breakpoints: number[],
 }
 
 type ChartProviderProps = {
@@ -17,6 +18,7 @@ type ChartProviderProps = {
 export function ChartProvider({ children, total, oscillation }: ChartProviderProps) {
 
     const percentageArr = oscillation.map(value => Math.round((value / total) * 100))
+    const breakpoints = [0, Math.round(total / 2), total].reverse()
 
     return (
         <ChartContext.Provider
@@ -24,6 +26,7 @@ export function ChartProvider({ children, total, oscillation }: ChartProviderPro
                 total,
                 oscillation,
                 percentageArr,
+                breakpoints,
             }}
         >
             {children}
