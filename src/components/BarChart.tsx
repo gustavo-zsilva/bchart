@@ -8,14 +8,15 @@ import { Header } from './Header'
 type BarChartProps = {
     total: number,
     oscillation: number[],
+    labels: string[],
 }
 
-export function BarChart({ total, oscillation }: BarChartProps) {
+export function BarChart({ total, oscillation, labels }: BarChartProps) {
 
     
 
     return (
-        <ChartProvider total={total} oscillation={oscillation}>
+        <ChartProvider total={total} oscillation={oscillation} labels={labels}>
             <Flex
                 display="grid"
                 bg="gray.900"

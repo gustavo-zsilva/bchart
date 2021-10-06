@@ -11,7 +11,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <BarChart total={1500} oscillation={[10, 45, 90, 1300, 1150, 1000, 540, 610, 250, 140, 1300, 1500]} />
+      <BarChart
+        total={10}
+        oscillation={[2, 3, 6, 8, 5, 2, 7]}
+        labels={['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho']}
+      />
     </Flex>
   )
 }

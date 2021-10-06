@@ -4,7 +4,7 @@ import { useChart } from '../hooks/useChart'
 
 export function Header() {
 
-    const { oscillation } = useChart()
+    const { oscillation, labels } = useChart()
 
     return (
         <Flex
@@ -12,16 +12,21 @@ export function Header() {
             gridColumnStart="2"
             gridGap="1rem"
             bgColor="gray.800"
-            p=".2rem"
+            p=".2rem .4rem"
+            justifyContent={labels.length >= oscillation.length ? null : "space-around"}
         >
-            {oscillation.map((value, index) => (
+            {labels.map((value, index) => (
                 <Tag
                     key={index}
                     size="sm"
                     borderRadius=".2rem"
                     bg="gray.900"
-                    color="#FFF"
-                    maxW="2rem"
+                    color="gray.400"
+                    p=".2rem"
+                    maxW={labels.length >= oscillation.length ? "2rem" : null}
+                    overflow="hidden"
+                    cursor="pointer"
+                    title={value}
                 >
                     {value}
                 </Tag>
