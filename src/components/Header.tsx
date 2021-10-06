@@ -1,10 +1,12 @@
 import { Flex, Tag } from "@chakra-ui/react";
 
 import { useChart } from '../hooks/useChart'
+import { useStyles } from "../hooks/useStyles";
 
 export function Header() {
 
     const { oscillation, labels } = useChart()
+    const { theme } = useStyles()
 
     return (
         <Flex
@@ -20,8 +22,8 @@ export function Header() {
                     key={index}
                     size="sm"
                     borderRadius=".2rem"
-                    bg="gray.900"
-                    color="gray.400"
+                    bg={theme.bgColor}
+                    color={theme.textColor}
                     p=".2rem"
                     maxW={labels.length >= oscillation.length ? "2rem" : null}
                     overflow="hidden"

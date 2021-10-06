@@ -2,14 +2,14 @@ import { createContext, ReactNode } from "react";
 
 export const StylesContext = createContext({} as StylesContextProps)
 
-type StylesContextProps = {
-    theme: Theme,
-}
-
 type Theme = {
     columnsColor: string,
     bgColor: string,
     textColor: string,
+}
+
+type StylesContextProps = {
+    theme: Theme,
 }
 
 type StylesProviderProps = {
@@ -19,7 +19,12 @@ type StylesProviderProps = {
     textColor: string,
 }
 
-export function StylesProvider({ children, columnsColor, bgColor, textColor }: StylesProviderProps) {
+export function StylesProvider({
+    children,
+    columnsColor = "green.400",
+    bgColor = "gray.900",
+    textColor = "gray.400",
+}: StylesProviderProps) {
 
     const theme = {
         columnsColor,

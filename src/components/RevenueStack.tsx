@@ -1,9 +1,11 @@
-import { Flex, Text, Divider } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { useChart } from "../hooks/useChart";
+import { useStyles } from "../hooks/useStyles";
 
 export function RevenueStack() {
 
     const { breakpoints } = useChart()
+    const { theme } = useStyles()
 
     return (
         <Flex
@@ -14,7 +16,7 @@ export function RevenueStack() {
             borderTop="3px solid"
             borderColor="gray.800"
             px=".6rem"
-            color="gray.400"
+            color={theme.textColor}
         >
             {breakpoints.map((value, index) => (
                 <Text key={index}>
