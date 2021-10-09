@@ -2,7 +2,7 @@
 
 Ever needed a chart on your website to show your product statistics? If so, BChart will cover these needs for you with a pre-built simplistic UI an totally customizable.
 
-> BChart is a pre-modeled bar chart for your projects.
+> BChart is a npm package.
 
 | Prop | Description | Type | Required |
 | -----| ---------- | ----- | -------- |
