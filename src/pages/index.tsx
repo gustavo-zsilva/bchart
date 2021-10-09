@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { BarChart } from '../components/BarChart'
+import { BarChart } from '../lib/components/BarChart'
 import { Flex } from '@chakra-ui/react'
 
 export default function Home() {
@@ -17,6 +17,7 @@ export default function Home() {
         labels={['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho']}
         bgColor="gray.700"
         columnsColor="yellow.500"
+        borderRadius="3rem"
       />
     </Flex>
   )

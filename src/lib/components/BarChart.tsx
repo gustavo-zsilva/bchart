@@ -30,17 +30,15 @@ export function BarChart({
                 <Flex
                     display="grid"
                     bg={bgColor ? bgColor : "gray.900"}
-                    
-                    {...chakraProps}
-
                     h="18rem"
-
                     borderRadius=".2rem"
                     border="4px solid"
                     borderColor="gray.700"
                     gridTemplateColumns="auto 1fr"
                     gridTemplateRows="auto 1fr"
                     gridTemplateAreas={`'Header Header' 'Revenue Columns'`}
+                    
+                    {...chakraProps}
                 >
                     <Header />
                     <ChartColumns />

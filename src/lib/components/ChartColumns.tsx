@@ -1,4 +1,4 @@
-import { Flex, Text, Tag } from '@chakra-ui/react'
+import { Flex } from '@chakra-ui/react'
 import { useChart } from '../hooks/useChart'
 import { useStyles } from '../hooks/useStyles'
 
