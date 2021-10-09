@@ -1,2 +1,2 @@
-# bchart
+# Bchart
  BChart is a pre-modeled bar chart for your projects.
